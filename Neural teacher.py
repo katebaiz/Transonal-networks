@@ -27,12 +27,12 @@ while True:
     right = False
     for i in range(tr):
         a = web.stdout.readline()
-        if "00001\n" == a[(len(a)-6):len(a)] and not ran:
+        if "01111\n" == a[(len(a)-6):len(a)] and not ran:
             web.stdin.write("STOP\n")
             web.stdin.flush()
             right = True
             break
-        elif "10000\n" == a[(len(a)-6):len(a)] and ran:
+        elif "11110\n" == a[(len(a)-6):len(a)] and ran:
             web.stdin.write("STOP\n")
             web.stdin.flush()
             right = True
@@ -53,3 +53,4 @@ while True:
     if sum(perc)/t > limit and t == n:
         break
 input()
+
